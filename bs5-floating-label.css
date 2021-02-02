@@ -11,12 +11,6 @@ Form Floating Label
 	position: relative;
 }
 
-.form-float .form-control, 
-.form-float .form-select {
-	border: 1px solid #ced4da;
-	z-index: ;
-}
-
 .form-float .form-select ~ label{
 	pointer-events:none !important;
 }
@@ -47,7 +41,7 @@ Form Floating Label
 	top: -.6rem;
 	font-size: var(--small-font);
 	z-index: 1;
-	color:#000;
+	/*color:#000;*/
 }
 
 /*===========================================
@@ -88,39 +82,26 @@ Form Floating Label
 
 /* general */
 
-
-.form-control:focus,
-.form-select:focus,
-.was-validated.form-control:focus ,
-.was-validated.form-select:focus,
-.form-control.is-valid:focus ,
-.form-select.is-valid:focus {
-	border-width: 1px;
-}
-
 	/* validation css */
-	/* input */
-.form-float.was-validated .form-control:valid:not(:placeholder-shown) ~ label,
-.form-float.was-validated .form-control:valid:focus:placeholder-shown ~ label,
-.form-float .form-control.is-valid:valid:not(:placeholder-shown) ~ label,
-.form-float .form-control.is-valid:valid:focus:placeholder-shown ~ label {
+	/* valid input label */
+.form-float.was-validated .form-control:valid ~ label,
+.form-float .form-control.is-valid:valid ~ label {
 	color: var(--bs-success);
-	border-width: 1.2px;
 }
 
-.form-float.was-validated .form-control:invalid:not(:placeholder-shown) ~ label,
-.form-float.was-validated .form-control:invalid:focus:placeholder-shown ~ label,
-.form-float .form-control.is-invalid:invalid:not(:placeholder-shown) ~ label,
-.form-float .form-control.is-invalid:invalid:focus:placeholder-shown ~ label {
+.form-float.was-validated .form-control:invalid ~ label,
+.form-float .form-control.is-invalid:invalid ~ label {
 	color: var(--bs-danger);
 }
-	
-	
+
 	/* select */
 .form-float.was-validated .form-select:valid ~ label,
 .form-float .form-select.is-valid:valid ~ label {
 	color: var(--bs-success);
- /*#777;*/
+}
+.form-float.was-validated .form-select:invalid ~ label,
+.form-float .form-select.is-invalid:invalid ~ label {
+	color: var(--bs-danger);
 }
 
 .form-float .form-select:focus ~ label {
