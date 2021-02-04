@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/gh/skwebs/ci4ama@master/public/assets/vendors/bootstrap/bs5-reset/bs5a2-remove.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/gh/skwebs/bs5-floating-label-css@master/bs5-md-form.css" rel="stylesheet">
+  <title>Floating Label Form with validation</title>
+</head>
+
+<body>
+  <div class="container py-5">
+    <h1 class="text-center">Without Validation Icon</h1>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card my-4">
+          <div class="card-header">
+            <h1 class="card-title">Outline Floting Label</h1>
+          </div>
+          <div class="card-body">
+            <form class="pt-4 md-form md-form-outline remove-validation-icon" novalidate>
+              <div class="form-group">
+                <input type="text" id="txt1" class="form-control" placeholder=" " onblur="validate(this)" required>
+                <span class="md-item-underline"></span>
+                <label for="txt1">Required Text Field</label>
+              </div>
+              <div class="form-group my-4">
+                <input type="text" id="txt2" class="form-control" placeholder=" " onblur="validate(this)">
+                <span class="md-item-underline"></span>
+                <label for="txt2">Normal Text Field</label>
+              </div>
+              <div class="form-group mb-3">
+                <select id="select1" onblur="validate(this)" class="form-select fields" required pattern="[^\0]">
+                  <option value="" required></option>
+                  <option value="opt1">Option 1</option>
+                  <option value="opt2">Option 2</option>
+                  <option value="opt3">Option 3</option>
+                </select>
+                <span class="md-item-underline"></span>
+                <label for="select1">Select</label>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card my-4">
+          <div class="card-header">
+            <h1 class="card-title">Underline Floting Label</h1>
+          </div>
+          <div class="card-body">
+            <form class="pt-4 md-form md-form-underline remove-validation-icon" novalidate>
+              <div class="form-group">
+                <input type="text" id="txt3" class="form-control" placeholder=" " onblur="validate(this)" required>
+                <span class="md-item-underline"></span>
+                <label for="txt3">Required Text Field</label>
+              </div>
+              <div class="form-group my-4">
+                <input type="text" id="txt4" class="form-control" placeholder=" " onblur="validate(this)">
+                <span class="md-item-underline"></span>
+                <label for="txt4">Normal Text Field</label>
+              </div>
+              <div class="form-group mb-3">
+                <select id="select2" onblur="validate(this)" class="form-select fields" required pattern="[^\0]">
+                  <option value="" required></option>
+                  <option value="opt1">Option 1</option>
+                  <option value="opt2">Option 2</option>
+                  <option value="opt3">Option 3</option>
+                </select>
+                <span class="md-item-underline"></span>
+                <label for="select2">Select</label>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h1 class="text-center mt-4">With Validation Icon</h1>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card my-4">
+          <div class="card-header">
+            <h1 class="card-title">Outline Floting Label</h1>
+          </div>
+          <div class="card-body">
+            <form class="pt-4 md-form md-form-outline" novalidate>
+              <div class="form-group">
+                <input type="text" id="txt1" class="form-control" placeholder=" " onblur="validate(this)" required>
+                <span class="md-item-underline"></span>
+                <label for="txt1">Required Text Field</label>
+              </div>
+              <div class="form-group my-4">
+                <input type="text" id="txt2" class="form-control" placeholder=" " onblur="validate(this)">
+                <span class="md-item-underline"></span>
+                <label for="txt2">Normal Text Field</label>
+              </div>
+              <div class="form-group mb-3">
+                <select id="select1" onblur="validate(this)" class="form-select fields" required pattern="[^\0]">
+                  <option value="" required></option>
+                  <option value="opt1">Option 1</option>
+                  <option value="opt2">Option 2</option>
+                  <option value="opt3">Option 3</option>
+                </select>
+                <span class="md-item-underline"></span>
+                <label for="select1">Select</label>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card my-4">
+          <div class="card-header">
+            <h1 class="card-title">Underline Floting Label</h1>
+          </div>
+          <div class="card-body">
+            <form class="pt-4 md-form md-form-underline" novalidate>
+              <div class="form-group">
+                <input type="text" id="txt3" class="form-control" placeholder=" " onblur="validate(this)" required>
+                <span class="md-item-underline"></span>
+                <label for="txt3">Required Text Field</label>
+              </div>
+              <div class="form-group my-4">
+                <input type="text" id="txt4" class="form-control" placeholder=" " onblur="validate(this)">
+                <span class="md-item-underline"></span>
+                <label for="txt4">Normal Text Field</label>
+              </div>
+              <div class="form-group mb-3">
+                <select id="select2" onblur="validate(this)" class="form-select fields" required pattern="[^\0]">
+                  <option value="" required></option>
+                  <option value="opt1">Option 1</option>
+                  <option value="opt2">Option 2</option>
+                  <option value="opt3">Option 3</option>
+                </select>
+                <span class="md-item-underline"></span>
+                <label for="select2">Select</label>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Optional JavaScript; choose one of the two! -->
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+  <!-- Option 2: Separate Popper and Bootstrap JS -->
+  <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+    -->
+  <script type="text/javascript">
+    function validate(inp) {
+      inp.parentNode.classList.add('was-validated');
+    }
+  </script>
+</body>
+
+</html>
