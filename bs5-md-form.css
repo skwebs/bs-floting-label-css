@@ -1,6 +1,15 @@
 :root {
   --small-font: .75rem;
-  --form-control-border-color:#ced4da;
+  --form-control-border-color: #ced4da;
+}
+
+/* remove validation icon */
+.remove-validation-icon .form-control {
+  background-image: none !important;
+}
+
+.remove-validation-icon .form-select {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e") !important;
 }
 
 /* Common CSS */
@@ -68,7 +77,7 @@ OUTLINE
 /* border on focus */
 .md-form.md-form-outline .form-control:focus,
 .md-form.md-form-outline .form-select:focus {
-border-width:1.25px;
+  border-width: 1.25px;
 }
 
 .md-form.md-form-outline .form-control~label,
@@ -96,8 +105,8 @@ border-width:1.25px;
 }
 
 .md-form.md-form-outline .was-validated .form-control:valid:not(:focus),
-.md-form.md-form-outline .was-validated .form-select:valid:not(:focus){
-border-color:var(--form-control-border-color);
+.md-form.md-form-outline .was-validated .form-select:valid:not(:focus) {
+  border-color: var(--form-control-border-color);
 }
 
 
@@ -128,7 +137,7 @@ UNDERLINE
 /* focus on valid input label */
 .md-form.was-validated .form-control:valid:focus~label,
 .md-form .was-validated .form-control:valid:focus~label,
-.md-form .form-control.is-valid:valid:focus~label, 
+.md-form .form-control.is-valid:valid:focus~label,
 /* focus on valid select label */
 .md-form.was-validated .form-select:valid:focus~label,
 .md-form .was-validated .form-select:valid:focus~label,
@@ -139,7 +148,7 @@ UNDERLINE
 /* invalid input label */
 .md-form.was-validated .form-control:invalid~label,
 .md-form .was-validated .form-control:invalid~label,
-.md-form .form-control.is-invalid:invalid~label, 
+.md-form .form-control.is-invalid:invalid~label,
 /* invalid select label */
 .md-form.was-validated .form-select:invalid~label,
 .md-form .was-validated .form-select:invalid~label,
@@ -150,11 +159,11 @@ UNDERLINE
 /* invalid input border */
 .md-form.was-validated .form-control:invalid,
 .md-form .was-validated .form-control:invalid,
-.md-form .form-control.is-invalid:invalid, 
+.md-form .form-control.is-invalid:invalid,
 /* invalid select label */
 .md-form.was-validated .form-select:invalid,
 .md-form .was-validated .form-select:invalid,
-.md-form .form-select.is-invalid:invalid{
+.md-form .form-select.is-invalid:invalid {
   border-color: var(--bs-danger);
 }
 
@@ -213,8 +222,8 @@ md-item-underline
 */
 
 /*.md-form.md-form-underline .form-control:not(:placeholder-shown):not(:focus)~.md-item-underline:before,*/
-.md-form.md-form-underline .form-control:focus~.md-item-underline:before ,
-  .md-form.md-form-underline .form-select:focus~.md-item-underline:before {
+.md-form.md-form-underline .form-control:focus~.md-item-underline:before,
+.md-form.md-form-underline .form-select:focus~.md-item-underline:before {
   transform: scaleX(1);
 }
 
@@ -224,20 +233,19 @@ md-item-underline
 .md-form.was-validated .form-control:valid~.md-item-underline:before,
 .md-form .was-validated .form-control:valid~.md-item-underline:before,
 .md-form .form-control.is-valid:valid~.md-item-underline:before,
- 
- .md-form.was-validated .form-select:valid~.md-item-underline:before,
- .md-form .was-validated .form-select:valid~.md-item-underline:before,
- .md-form .form-select.is-valid:valid~.md-item-underline:before
- {
+
+.md-form.was-validated .form-select:valid~.md-item-underline:before,
+.md-form .was-validated .form-select:valid~.md-item-underline:before,
+.md-form .form-select.is-valid:valid~.md-item-underline:before {
   background-color: var(--bs-success);
 }
+
 /** ==================
 * highlightet color on invalid input 
 */
 .md-form.was-validated .form-control:invalid~.md-item-underline:before,
 .md-form .was-validated .form-control:invalid~.md-item-underline:before,
-.md-form .form-control.is-invalid:invalid~.md-item-underline:before
-{
+.md-form .form-control.is-invalid:invalid~.md-item-underline:before {
   background-color: var(--bs-danger);
 }
 
@@ -250,10 +258,10 @@ md-item-underline
 /* when field is not empty and and not focused */
 .md-form .form-control.is-invalid:invalid:not(:placeholder-shown):not(:focus)~.md-item-underline:before,
 /* when invalid field is focused */
-.md-form .form-control.is-invalid:invalid:focus~.md-item-underline:before ,
-{
-transform: scaleX(1);
-background-color: var(--bs-danger);
+.md-form .form-control.is-invalid:invalid:focus~.md-item-underline:before,
+  {
+  transform: scaleX(1);
+  background-color: var(--bs-danger);
 }
 
 /* FORM-CONTROL */
@@ -271,14 +279,14 @@ background-color: var(--bs-danger);
 .md-form .form-select.is-invalid:invalid:not(:placeholder-shown),
 /* when field is invalid  */
 .md-form .form-select.is-invalid:invalid {
-border-bottom:1px solid var(--bs-danger) !important;
+  border-bottom: 1px solid var(--bs-danger) !important;
 }
 
 /* when field has invalid value */
 .md-form.md-form-underline .was-validated .form-select:invalid:not(:placeholder-shown):not(:focus)~.md-item-underline:before,
 /* when focus on invalid field */
 .md-form.md-form-underline .was-validated .form-select:invalid:focus~.md-item-underline:before {
-background: var(--bs-danger);
+  background: var(--bs-danger);
 }
 
 
