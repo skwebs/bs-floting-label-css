@@ -59,13 +59,16 @@ Form Floating Label
 /* label float up */
 /* when focused */
 .md-form .form-control:focus~label,
-/* when field is not empty and not focused */
+/* when input field is not empty and not focused */
 .md-form .form-control:not(:placeholder-shown):not(:focus)~label,
+/* when select field is not empty and not focused */
+md-form .form-select:not(:placeholder-shown)~label,
 /* when selected any option */
-.md-form .form-select:valid~label {
+.md-form .form-select:not([value=""]):valid~label {
   top: -.6rem;
   font-size: var(--small-font);
   z-index: 1;
+  background:#fff;
 }
 
 
@@ -85,7 +88,6 @@ OUTLINE
   left: .5rem;
   padding-left: 0.25rem;
   padding-right: .5rem;
-  background: #fff;
 }
 
 .md-form.md-form-outline .form-control-sm~label,
@@ -93,7 +95,6 @@ OUTLINE
   left: .25rem;
   padding-left: 0.25rem;
   padding-right: .5rem;
-  background: #fff;
 }
 
 .md-form.md-form-outline .form-control-lg~label,
@@ -101,7 +102,6 @@ OUTLINE
   left: .75rem;
   padding-left: 0.25rem;
   padding-right: .5rem;
-  background: #fff;
 }
 
 .md-form.md-form-outline .was-validated .form-control:valid:not(:focus),
